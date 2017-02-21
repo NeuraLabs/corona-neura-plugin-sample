@@ -1,0 +1,15 @@
+settings =
+{
+	orientation = {
+		default = "portrait", 
+		supported = { "portrait" }
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			-- UIApplicationExitsOnSuspend = true, -- default is false
+		},
+	}
+}

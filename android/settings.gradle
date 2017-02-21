@@ -1,0 +1,4 @@
+include ':app'
+
+include 'plugin'
+project(':plugin').projectDir = new File('../../source/android/plugin')
