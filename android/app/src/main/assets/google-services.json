@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "924593795624",
+    "firebase_url": "https://neura-sample.firebaseio.com",
+    "project_id": "neura-sample",
+    "storage_bucket": "neura-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924593795624:android:3d85226858b07b12",
+        "android_client_info": {
+          "package_name": "com.deleurapps.NeuraSample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924593795624-urg2cuc0br0psv61svumbl0hq7f6ms67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeGRSiSeoPQg1n9huwhBvGNJYxm4ww0_4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

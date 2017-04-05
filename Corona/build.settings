@@ -11,5 +11,23 @@ settings =
 		{
 			-- UIApplicationExitsOnSuspend = true, -- default is false
 		},
-	}
+	},
+
+	android = 
+	{
+	    permissions = {},
+	    usesPermissions = {},
+	    useGoogleServicesJson = true,
+	},
+
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["plugin.neura"] =
+		{
+			-- required
+			publisherId = "com.neura",
+		},
+		['plugin.toast'] = {publisherId = 'com.spiralcodestudio'}
+	},
 }
