@@ -35,7 +35,7 @@ local function authenticateListener(event)
 	if event.type == "Success" then
 		setUIState(true)
 		neura.registerFirebaseToken()
-		
+		print("Start subscribe")
      	for i, v in ipairs(event.data.events) do
      		if v.pushNotificationText ~= "" then
 				neura.subscribeToEvent(v.name, "Identifier_"..v.name, subscribeToEventListener)
@@ -46,6 +46,7 @@ local function authenticateListener(event)
 				neura.registerNotificationForEvent(v.name, notificationOptions)
 			end
 		end
+		print("End subscribe")
 	else
 		requestPermissionsBtn:setEnabled(true)
 	end

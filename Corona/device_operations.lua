@@ -19,7 +19,7 @@ local function getAllDevicesListener(event)
 	if event.type == "Success" then
 		local devices = event.data.items
 		toast.show("Successfully received " .. #devices .. " devices")
-		print("Successfully received " .. #devices .. " devices")
+		print("Successfully received " .. #devices .. " devices: " .. json.prettify(devices))
 	else
 		toast.show("Failed to receive devices list")
 		print("Failed to receive devices list")
@@ -33,7 +33,7 @@ end
 local function getAllCapabilities()
 	local capabilities = neura.getKnownCapabilities()
 	toast.show("Successfully received " .. #capabilities .. " capabilities")
-	print("Successfully received " .. #capabilities .. " capabilities")
+	print("Successfully received " .. #capabilities .. " capabilities: " .. json.prettify(capabilities))
 end
 
 local function hasDeviceWithCapability()
@@ -63,7 +63,7 @@ local function addDeviceByName()
 	if (addDeviceByNameTextField.text == "") then
 		toast.show("Please set a device name")
 	else
-		neura.addDevice({deviceName = {addDeviceByNameTextField.text}}, addDeviceListener)
+		neura.addDevice({deviceName = addDeviceByNameTextField.text}, addDeviceListener)
 	end
 end
 
