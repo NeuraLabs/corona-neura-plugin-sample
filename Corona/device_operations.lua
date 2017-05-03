@@ -51,7 +51,7 @@ local function addADevice()
 	neura.addDevice(addDeviceListener)
 end
 
-local function addDeviceByCapabilityTextField()
+local function addDeviceByCapability()
 	if (addDeviceByCapabilityTextField.text == "") then
 		toast.show("Can't add device, capabilities are blank")
 	else

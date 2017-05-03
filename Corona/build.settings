@@ -28,6 +28,11 @@ settings =
 			-- required
 			publisherId = "com.neura",
 		},
-		['plugin.toast'] = {publisherId = 'com.spiralcodestudio'}
+		['plugin.toast'] = {publisherId = 'com.spiralcodestudio'},
+		
+		["plugin.notifications.v2"] =
+        {
+            publisherId = "com.coronalabs"
+        },
 	},
 }

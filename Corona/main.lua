@@ -2,6 +2,7 @@ local composer = require( "composer" )
 json = require("json")
 toast = require('plugin.toast')
 neura = require("plugin.neura")
+local notifications = require( "plugin.notifications.v2" )
 
 local function generalNeuraListener(event)
 	-- print("generalNeuraListener enter")
@@ -14,6 +15,7 @@ neura.connect({
 	appSecret = "77a52fe07ef104079e77d2a66e8630b4d3fbdd3d2dbe06098fda3fb7d8a1df2d"},
 	generalNeuraListener) 
 
+-- notifications.registerForPushNotifications( { useFCM=true } )
 
 -- Prints all contents of a Lua table to the log.
 local function printTable(table, stringPrefix)
@@ -64,6 +66,10 @@ Runtime:addEventListener("notification", onNotification)
 local launchArgs = ...
 print("### --- Launch Arguments ---")
 printTable(launchArgs)
+
+if ( launchArgs and launchArgs.notification ) then
+    notificationListener( launchArgs.notification )
+end
 
 -- Go to the menu screen
 composer.gotoScene( "menu" )
